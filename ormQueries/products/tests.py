@@ -38,7 +38,7 @@ class ProductCrudTestCase(TestCase):
   
   def test_by_rating_range(self):
     """finds products within an average rating range"""
-    product_crud = ProductCrud.by_rating_range(1.1,1.5)
+    product_crud = ProductCrud.by_rating_range(1.1, 1.5)
     product_ids = get_query_ids(product_crud)
     self.assertEquals(product_ids, [14, 15, 16, 18, 21])
     
@@ -50,7 +50,7 @@ class ProductCrudTestCase(TestCase):
     self.assertEquals(product_ids, [7])
 
   def test_by_rating_or_color(self):
-    """finds products a rating or color value"""
+    """finds products by a rating or color value"""
     product_crud = ProductCrud.by_rating_or_color(4.3 , 'blue')
     product_ids = get_query_ids(product_crud)
 
