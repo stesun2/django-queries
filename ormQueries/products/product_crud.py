@@ -1,6 +1,4 @@
 from .models import Product 
-from django.db.models import Q, Avg, Max
-from django.db.models.functions import Length
 
 
 class ProductCrud():
