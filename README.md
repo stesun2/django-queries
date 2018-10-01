@@ -1,4 +1,4 @@
-# Active Record Queries
+# Django ORM Queries
 
 In this challenge you'll be working with a single model, `Product`. The database schema has already been created for you.
 
