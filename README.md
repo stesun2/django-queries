@@ -1,14 +1,14 @@
-##### Create env 
-`py -m virtualenv <envname>`
+Create env
+py -m virtualenv <envname>
 
-##### Start env
-`source <envname>/bin/activate`
+Start env
+source <envname>/bin/activate
 
-##### install django 
-`pip install django`
+install django
+pip install django
 
-##### Create a db
-`createdb <nameofdb>`
+Create a db
+createdb <nameofdb>
 
-##### YAML 
-Make sure `pip install pyyaml`. 
+YAML
+Make sure pip install pyyaml.
