@@ -8,7 +8,7 @@ Create a virtual env. Start it up. Then tell pip to read the `requirements.txt` 
 
 ```
 
-py -m virtualenv venv 
+python3 -m virtualenv venv 
 
 source venv/bin/activate
 
