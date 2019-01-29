@@ -126,6 +126,3 @@ class ProductCrudTestCase(TestCase):
     product_crud = ProductCrud.ordered_by_model_length()
     product_ids = get_query_ids(product_crud)
     self.assertEquals(product_ids, [8, 28, 15, 11, 27, 5, 17, 10, 7, 1, 9, 12, 26, 30, 2, 13, 3, 4, 21, 24, 29, 16, 14, 20, 23, 18, 6, 22, 19, 25])
-
-    
-    
