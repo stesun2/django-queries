@@ -1,8 +1,6 @@
 from .models import Product 
 
-
-class ProductCrud():
-
+class ProductCrud:
   @classmethod
   def get_all_products(self):
     pass
