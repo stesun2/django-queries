@@ -73,11 +73,10 @@ class ProductCrudTestCase(TestCase):
     self.assertEquals(product_ids, [1, 18, 10, 27, 29, 21, 9, 7, 15, 5, 19, 8, 4, 30, 14, 22, 16, 13, 26, 3, 28, 23, 24, 25, 17, 12, 2, 20, 11, 6])
   
   def test_11_products_by_manufacturer(self):
-    """returns products made by manufacturers"""
-    product_crud = ProductCrud.products_by_manufacturer('Group')
+    """returns products made by manufacturers with names containing an input string"""
+    product_crud = ProductCrud.products_by_manufacturer_with_name_like('Group')
     product_ids = get_query_ids(product_crud)
     self.assertEquals(product_ids, [2, 3, 6, 29])
-
 
   def test_12_manufacturer_names_for_query(self):
     """returns a list of manufacturer names that match query"""
