@@ -12,22 +12,18 @@ class ProductCrudTestCase(TestCase):
         """Returns all Products"""
         product_crud = ProductCrud.get_all_products()
         product = Product.objects.all()
-
         self.assertEqual(list(product_crud), list(product))
 
     def test_02_find_by_model(self):
         """finds the matching product by model name"""
-
         product_crud = ProductCrud.find_by_model("Heavy Duty Steel Clock")
         product = Product.objects.get(id=3)
-
         self.assertEqual(product_crud, product)
 
     def test_03_last_record(self):
         """finds the last record inserted"""
         product_crud = ProductCrud.last_record()
         product = Product.objects.get(id=30)
-
         self.assertEqual(product_crud, product)
 
     def test_04_by_rating(self):
@@ -46,14 +42,12 @@ class ProductCrudTestCase(TestCase):
         """finds products by rating & color value"""
         product_crud = ProductCrud.by_rating_and_color(3.5, 'maroon')
         product_ids = get_query_ids(product_crud)
-
         self.assertEquals(product_ids, [7])
 
     def test_07_by_rating_or_color(self):
         """finds products by a rating or color value"""
         product_crud = ProductCrud.by_rating_or_color(4.3 , 'blue')
         product_ids = get_query_ids(product_crud)
-
         self.assertEquals(product_ids, [5, 15])
 
     def test_08_no_color_count(self):
@@ -103,19 +97,16 @@ class ProductCrudTestCase(TestCase):
     def test_16_average_category_rating(self):
         """returns the average"""
         product_crud = ProductCrud.average_category_rating('Baby')
-
         self.assertEqual(product_crud['rating__avg'], 2.32)
 
     def test_17_greatest_price(self):
         """returns the highest price"""
         product_crud = ProductCrud.greatest_price()
-
         self.assertEquals(product_crud['price_cents__max'], 9758)
 
     def test_18_longest_model_name(self):
         """returns the id of the product with the longest model name"""
         product_crud = ProductCrud.longest_model_name()
-
         self.assertEquals(product_crud, 25)
 
     def test_19_ordered_by_model_length(self):
