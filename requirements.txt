@@ -1,5 +1,5 @@
 Django==2.1.1
-psycopg2==2.7.5
+psycopg2==2.8.6
 pytz==2018.5
 PyYAML==3.13
 redgreenunittest==0.1.1
