@@ -60,7 +60,7 @@ class ProductCrudTestCase(TestCase):
         product_ids = get_query_ids(product_crud)
         self.assertEquals(product_ids, [2, 3, 4, 5, 11, 22, 25])
 
-    def test_10_ordered_by_category_alphabetical_order_and_then__price_decending(self):
+    def test_10_ordered_by_category_alphabetical_order_and_then_price_decending(self):
         """returns products ordered by category alphabetical and decending price"""
         product_crud = ProductCrud.ordered_by_category_alphabetical_order_and_then_price_decending()
         product_ids = get_query_ids(product_crud)
